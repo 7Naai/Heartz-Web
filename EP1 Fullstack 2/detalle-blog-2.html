@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/productos.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Detalle blog 2</title>
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .main-content {
+        flex: 1;
+      }
+    </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" style="padding-left: 15px;">
@@ -42,23 +52,25 @@
     </div>
   </nav>
 
-  <section class="container my-5" style="padding-top: 100px;">
-    <div class="row align-items-center">
-      
-      <div class="col-md-6 text-center">
-        <img src="img/gam.jpg" alt="Tornamesas" class="img-fluid shadow" style="max-height: 500px; object-fit: cover;">
+  <div class="main-content">
+    <section class="container my-5" style="padding-top: 100px;">
+      <div class="row align-items-center">
+        
+        <div class="col-md-6 text-center">
+          <img src="img/gam.jpg" alt="Tornamesas" class="img-fluid shadow" style="max-height: 500px; object-fit: cover;">
+        </div>
+        
+        <div class="col-md-6">
+          <h2 class="jumbotron-heading mb-3">El Día del Vinilo 2025 se expande en Santiago: feria, lanzamientos y firmas en el GAM</h2>
+          <p class="lead text-muted">
+            Este 9 de agosto, el Centro Cultural Gabriela Mistral (GAM) será sede de la cuarta edición del Día del Vinilo en Chile. 
+            El evento (abierto y gratuito) reunirá a sellos, disquerías, coleccionistas y marcas como Selknam Records, Punto Musical, Sony Music, Universal y sellos independientes como Fisura y Aula Records. 
+            Habrá una feria de vinilos, lanzamientos exclusivos (como La Sangre en el Cuerpo de Los Tres y La Medicina de Los Tetas), escuchas comentadas por los propios artistas y firmas de discos: una celebración imperdible para los amantes del formato analógico.
+          </p>
+        </div>
       </div>
-      
-      <div class="col-md-6">
-        <h2 class="jumbotron-heading mb-3">El Día del Vinilo 2025 se expande en Santiago: feria, lanzamientos y firmas en el GAM</h2>
-        <p class="lead text-muted">
-          Este 9 de agosto, el Centro Cultural Gabriela Mistral (GAM) será sede de la cuarta edición del Día del Vinilo en Chile. 
-          El evento (abierto y gratuito) reunirá a sellos, disquerías, coleccionistas y marcas como Selknam Records, Punto Musical, Sony Music, Universal y sellos independientes como Fisura y Aula Records. 
-          Habrá una feria de vinilos, lanzamientos exclusivos (como La Sangre en el Cuerpo de Los Tres y La Medicina de Los Tetas), escuchas comentadas por los propios artistas y firmas de discos: una celebración imperdible para los amantes del formato analógico.
-        </p>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <footer class="bg-dark text-light text-center py-3 mt-5">
         <div class="container">

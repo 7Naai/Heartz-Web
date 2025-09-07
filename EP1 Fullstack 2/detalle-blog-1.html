@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/productos.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Detalle Blog 1</title>
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .main-content {
+        flex: 1;
+      }
+    </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" style="padding-left: 15px;">
@@ -41,26 +51,28 @@
       </div>
     </div>
   </nav>
+  <div class="main-content">
+    <section class="container my-5">
+      <div class="row align-items-center">
+        
+        <div class="col-md-6 text-center">
+          <img src="img/Radiohead-Tour.webp" alt="Tornamesas" class="img-fluid shadow" style="max-height: 500px; object-fit: cover;">
+        </div>
+        
+        <div class="col-md-6">
+          <h2 class="jumbotron-heading mb-3">Radiohead anuncia su regreso a los escenarios luego de 7 años de ausencia</h2>
+          <p class="lead text-muted">
+            Tras siete años de pausa en vivo, la icónica banda británica anunció su esperada vuelta a los escenarios.<br>
+            Radiohead recorrerá cinco ciudades europeas —Madrid, Bolonia, Londres, Copenhague y Berlín— con 20 conciertos programados entre noviembre y diciembre de 2025, ofreciendo cuatro presentaciones en cada ciudad.
+            <br><br>
+            El baterista Phil Selway reveló que se reencontraron en los ensayos del año pasado y la experiencia los motivó a retomar los escenarios. “Después de una pausa de siete años, reconectar con nuestra identidad musical fue realmente positivo… Por ahora, solo serán estas fechas, pero quién sabe a dónde nos llevará todo esto”,
+             dijo. Además, anunciaron el lanzamiento de un álbum en vivo: Hail to the Thief - Live Recordings 2003-2009, que saldrá el 31 de octubre
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <section class="container my-5">
-    <div class="row align-items-center">
-      
-      <div class="col-md-6 text-center">
-        <img src="img/Radiohead-Tour.webp" alt="Tornamesas" class="img-fluid shadow" style="max-height: 500px; object-fit: cover;">
-      </div>
-      
-      <div class="col-md-6">
-        <h2 class="jumbotron-heading mb-3">Radiohead anuncia su regreso a los escenarios luego de 7 años de ausencia</h2>
-        <p class="lead text-muted">
-          Tras siete años de pausa en vivo, la icónica banda británica anunció su esperada vuelta a los escenarios.<br>
-          Radiohead recorrerá cinco ciudades europeas —Madrid, Bolonia, Londres, Copenhague y Berlín— con 20 conciertos programados entre noviembre y diciembre de 2025, ofreciendo cuatro presentaciones en cada ciudad.
-          <br><br>
-          El baterista Phil Selway reveló que se reencontraron en los ensayos del año pasado y la experiencia los motivó a retomar los escenarios. “Después de una pausa de siete años, reconectar con nuestra identidad musical fue realmente positivo… Por ahora, solo serán estas fechas, pero quién sabe a dónde nos llevará todo esto”,
-           dijo. Además, anunciaron el lanzamiento de un álbum en vivo: Hail to the Thief - Live Recordings 2003-2009, que saldrá el 31 de octubre
-        </p>
-      </div>
-    </div>
-  </section>
+  </div>
 
   <footer class="bg-dark text-light text-center py-3 mt-5">
         <div class="container">
