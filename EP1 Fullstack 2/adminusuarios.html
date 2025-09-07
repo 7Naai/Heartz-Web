@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Gestión de Productos</title>
+    <title>Gestión de Usuarios</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="admin.html">Panel Admininistrador Heartz</a>
@@ -31,20 +30,23 @@
                 </ul>
             </div>
             <div class="col-md-10 mt-4">
-                <h2 class="mb-4">Gestión de Productos</h2>
+                <h2 class="mb-4">Gestión de Usuarios</h2>
                 <div class="card mb-4">
                     <div class="card-body">
-                    <h5 class="card-title">Agregar Producto</h5>
-                    <form id="formProducto">
+                    <h5 class="card-title">Agregar Usuario</h5>
+                    <form id="formUsuario">
                         <div class="row g-3">
                         <div class="col-md-2">
-                            <input type="number" id="idProducto" class="form-control" placeholder="ID" required>
+                            <input type="text" id="rutUsuario" class="form-control" placeholder="RUT" required>
                         </div>
                         <div class="col-md-3">
-                            <input type="text" id="nombreProducto" class="form-control" placeholder="Nombre" required>
+                            <input type="text" id="nombreUsuario" class="form-control" placeholder="Nombre" required>
                         </div>
                         <div class="col-md-3">
-                            <input type="number" id="precioProducto" class="form-control" placeholder="Precio" required>
+                            <input type="text" id="correoUsuario" class="form-control" placeholder="Correo" required>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="date" id="fechaNacimiento" class="form-control" placeholder="Fecha de nacimiento" required>
                         </div>
                         <div class="col-md-4 d-grid">
                             <button type="submit" class="btn btn-primary">Agregar</button>
@@ -55,14 +57,15 @@
                 </div>
                 <table class="table table-bordered table-striped">
                     <thead class="table-dark">
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Precio</th>
-                            <th>Acciones</th>
-                        </tr>
+                    <tr>
+                        <th>Rut</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Acciones</th>
+                    </tr>
                     </thead>
-                    <tbody id="tablaProductos">
+                    <tbody id="tablaUsuarios">
                     </tbody>
                 </table>
             </div>
@@ -75,58 +78,58 @@
         </div>
     </footer>
 
+
     <script>
-        const formProducto = document.getElementById("formProducto");
-        const tablaProductos = document.getElementById("tablaProductos");
+        const formUsuario = document.getElementById("formUsuario");
+        const tablaUsuarios = document.getElementById("tablaUsuarios");
 
-        let productos = [];
+        let usuarios = [];
 
-        // Agregar producto
-        formProducto.addEventListener("submit", (e) => {
+        formUsuario.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            const id = document.getElementById("idProducto").value;
-            const nombre = document.getElementById("nombreProducto").value;
-            const precio = document.getElementById("precioProducto").value;
+            const rut = document.getElementById("rutUsuario").value;
+            const nombre = document.getElementById("nombreUsuario").value;
+            const correo = document.getElementById("correoUsuario").value;
+            const fecnac = document.getElementById("fechaNacimiento").value;
 
-            productos.push({ id, nombre, precio });
-            mostrarProductos();
+            usuarios.push({ rut, nombre, correo, fecnac });
+            mostrarUsuarios();
 
-            formProducto.reset();
+            formUsuario.reset();
         });
 
-        // Mostrar productos en tabla
-        function mostrarProductos() {
-            tablaProductos.innerHTML = "";
-            productos.forEach((p, index) => {
-                tablaProductos.innerHTML += `
+        function mostrarUsuarios() {
+            tablaUsuarios.innerHTML = "";
+            usuarios.forEach((p, index) => {
+                tablaUsuarios.innerHTML += `
                     <tr>
-                        <td>${p.id}</td>
+                        <td>${p.rut}</td>
                         <td>${p.nombre}</td>
-                        <td>$${p.precio}</td>
+                        <td>${p.correo}</td>
+                        <td>${p.fecnac}</td>
                         <td>
-                            <button class="btn btn-warning btn-sm" onclick="editarProducto(${index})">Editar</button>
-                            <button class="btn btn-danger btn-sm" onclick="eliminarProducto(${index})">Eliminar</button>
+                            <button class="btn btn-warning btn-sm" onclick="editarUsuario(${index})">Editar</button>
+                            <button class="btn btn-danger btn-sm" onclick="eliminarUsuario(${index})">Eliminar</button>
                         </td>
                     </tr>
                 `;
             });
         }
 
-        // Editar producto
-        function editarProducto(index) {
-            const producto = productos[index];
-            document.getElementById("idProducto").value = producto.id;
-            document.getElementById("nombreProducto").value = producto.nombre;
-            document.getElementById("precioProducto").value = producto.precio;
-            productos.splice(index, 1); // Elimina el producto temporalmente para actualizarlo
-            mostrarProductos();
+        function editarUsuario(index) {
+            const usuario = usuarios[index];
+            document.getElementById("rutUsuario").value = usuario.rut;
+            document.getElementById("nombreUsuario").value = usuario.nombre;
+            document.getElementById("correoUsuario").value = usuario.correo;
+            document.getElementById("fechaNacimiento").value = usuario.fecnac;
+            usuarios.splice(index, 1);
+            mostrarUsuarios();
         }
 
-        // Eliminar producto
-        function eliminarProducto(index) {
-            productos.splice(index, 1);
-            mostrarProductos();
+        function eliminarUsuarios(index) {
+            usuarios.splice(index, 1);
+            mostrarUsuarios();
         }
     </script>
 

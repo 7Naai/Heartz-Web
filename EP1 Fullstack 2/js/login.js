@@ -9,7 +9,7 @@
       return;
     }
 
-    if (email === "admin@correo.com" && password === "1234") {
+    if (email === "admin@heartz.cl" && password === "1234") {
       window.location.href = "admin.html";
       
     } else {

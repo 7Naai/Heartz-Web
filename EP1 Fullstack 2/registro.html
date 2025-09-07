@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .main-content {
+        flex: 1;
+      }
+    </style>
     <title>Inicio</title>
 </head>
 <body>
@@ -33,27 +43,40 @@
     </div>
   </div>
 </nav>
-  <div class="container d-flex justify-content-center align-items-center" style="padding-top: 210px;">
-    <img src="img/icono-usuario.png" alt="" height="150" class="mb-3">
-    <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
-      <div class="form-floating mb-3">
-        <input type="email" class="form-control form-control-sm" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Correo Electrónico</label>
+  <div class="main-content">
+    <div class="container d-flex justify-content-center align-items-center" style="padding-top: 210px;">
+      <img src="img/icono-usuario.png" alt="" height="150" class="mb-3">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control form-control-sm" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Correo Electrónico</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control form-control-sm" id="floatingInput" placeholder="Password" autocomplete="off">
+          <label for="floatingPassword">Nombre completo</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control form-control-sm" id="floatingInput" placeholder="Password" autocomplete="off">
+          <label for="floatingPassword">Rut</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="date" class="form-control form-control-sm" id="floatingInput" placeholder="Password" autocomplete="off">
+          <label for="floatingPassword">Fecha de nacimiento</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control form-control-sm" id="floatingPassword" placeholder="Password" autocomplete="off">
+          <label for="floatingPassword">Contraseña</label>
+        </div>
+          <button class="btn btn-outline-primary w-100">Registrarse</button>
       </div>
-      <div class="form-floating mb-3">
-        <input type="password" class="form-control form-control-sm" id="floatingPassword" placeholder="Password" autocomplete="off">
-        <label for="floatingPassword">Nombre completo</label>
-      </div>
-      <div class="form-floating mb-3">
-        <input type="password" class="form-control form-control-sm" id="floatingPassword" placeholder="Password" autocomplete="off">
-        <label for="floatingPassword">Fecha de nacimiento</label>
-      </div>
-      <div class="form-floating mb-3">
-        <input type="password" class="form-control form-control-sm" id="floatingPassword" placeholder="Password" autocomplete="off">
-        <label for="floatingPassword">Contraseña</label>
-      </div>
-        <button class="btn btn-outline-primary w-100">Registrarse</button>
     </div>
   </div>
+
+  <footer class="bg-dark text-light text-center py-3 mt-5">
+        <div class="container">
+            <small>© 2025 Heartz. Todos los derechos reservados. Av. Apoquindo 2730</small>
+        </div>
+    </footer>
+    
 </body>
 </html>
