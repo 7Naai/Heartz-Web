@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Carrito</title>
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .main-content {
+        flex: 1;
+      }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" style="padding-left: 15px;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Heartz</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="productos.html">Productos
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+        <form class="d-flex" style="padding-right: 15px;">
+          <a class="btn btn-secondary" href="inicio-sesion.html">Iniciar Sesión</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="main-content">
+    <div class="container my-5">
+      <h2 class="mb-4 text-center">Carrito de Compras</h2>
+      <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="detalledeftones.html" style="text-decoration: none;">
+                <img src="img/snwdeftones_p.jpg" alt="" width="50" class="me-2 rounded">
+              </a>
+              Saturday Night Wrist - Deftones (Vinilo)
+            </td>
+            <td>$44.900</td>
+            <td>1</td>
+            <td>$44.900</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="detallemagdalena.html" style="text-decoration: none;">
+                <img src="img/idmagdalenabay_p.jpg" alt="" width="50" class="me-2 rounded">
+              </a>
+              Imaginal Disk - Magdalena Bay (Vinilo)
+            </td>
+            <td>$56.900</td>
+            <td>1</td>
+            <td>$56.900</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="3" class="text-end">Total</th>
+            <th>$101.800</th>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-success">Pagar</button>
+      </div>
+      <div class="alert alert-warning text-center mt-3">
+        Actualmente solo contamos con retiro en tienda
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-light text-center py-3 mt-5">
+    <div class="container">
+      <small>© 2025 Heartz. Todos los derechos reservados. Av. Apoquindo 2730</small>
+    </div>
+  </footer>
+</body>
+</html>
