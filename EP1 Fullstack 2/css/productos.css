@@ -1,0 +1,18 @@
+/* Ajusta la imagen para que no pierda proporción */
+.producto-img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el mouse */
+.producto-img:hover {
+    transform: scale(1.05); /* Hace un pequeño zoom */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+/* Para que no se note el subrayado del link */
+.img-link {
+    text-decoration: none;
+}
